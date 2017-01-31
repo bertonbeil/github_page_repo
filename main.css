@@ -1,0 +1,97 @@
+/*@import url('https://fonts.googleapis.com/css?family=Slabo+27px');*/
+@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background: #263238;
+    color: #FAFAFA;
+    /*font-family: 'Slabo 27px', serif;*/
+    /*font-family: 'VT323', monospace;*/
+    font-family: 'Bitter', serif;
+}
+
+.container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.text-center { text-align: center; }
+.large { font-size: 50px; }
+
+
+.js-text-input {
+    width: 100%;
+    height: 200px;
+    background: transparent;
+    color: #00C853;
+    resize: none;
+    outline: #E91E63;
+    font-size: 24px;
+}
+button.js-btn-count {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    background: #F44336;
+    border: 0;
+    outline: 0;
+}
+
+
+div.js-output{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding-left: 20px;
+    margin-top: 150px;
+}
+div.js-output::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 1px;
+    background: #000;
+}
+div.js-output::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    top: -90px;
+    left: 10px;
+    height: 100%;
+    background: #000;
+}
+
+div.js-letter {
+    position: relative;
+    float: left;
+    width: 40px;
+    color: #FFF;
+    margin-right: 3px;
+    margin-top: -25px;
+    text-align: center;
+}
+div.js-letter > span {
+    display: block;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+div.js-histogram-level {
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    height: 0px;
+    background: #880E4F;
+    opacity: .5;
+    z-index: -1;
+    transition: all .5s;
+}

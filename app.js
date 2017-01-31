@@ -1,4 +1,8 @@
-
+this.version = '0.0.1'
+var ver = $('<p/>', {
+  class: 'app-version',
+  text: this.version
+ }).appendTo('body');
 function updateCounts() {
 
     this.mainForm =  $('form.js-main-form');
@@ -62,6 +66,7 @@ function updateCounts() {
 
     // Print total character count
     outputValue.append(document.createTextNode('-----TOTAL CHARACTERS: ' + cipher.length + "\n"));
+
 }
 
 function zeroPad(n, digits, padChar) {

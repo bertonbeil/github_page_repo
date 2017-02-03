@@ -8,7 +8,8 @@ function updateCounts() {
     this.mainForm =  $('form.js-main-form');
     this.textInput = $('textarea.js-text-input');
     this.btnUpdate = $('button.js-btn-count');
-    this.outputValue = $('div.det-info-box');
+    this.outputValue = $('div.js-output');
+    this.detInfo = $('div.det-info-box');
 
     var cipher = textInput.val();
     var arrChars = [];
@@ -65,7 +66,7 @@ function updateCounts() {
     }
 
     // Print total character count
-    outputValue.append(document.createTextNode('-----TOTAL CHARACTERS: ' + cipher.length + "\n"));
+    detInfo.append(document.createTextNode('-----TOTAL CHARACTERS: ' + cipher.length + "\n"));
 
 }
 

@@ -17,12 +17,24 @@
     <div class="container">
 
         <!-- form block -->
-        <form class="js-main-form">
-          <p class="form-info-text">Insert or type your cipher below</p>
+        <form class="drawer-all js-main-form">
+          <p class="info-text">Insert or type your cipher below</p>
             <textarea name="textInput" class="js-text-input"></textarea>
             <button type="button" class="js-btn-count" onclick="updateCounts()">Show</button>
-        </form>
-        <div class="js-output"></div><!--/ form block -->
+        </form><!--/ form block -->
+
+        <!-- detailed information box -->
+        <div class="drawer-all det-info-box">
+          <p class="info-text">Detailed information</p>
+        </div>
+        <!--/ detailed information box -->
+
+        <!-- outputs -->
+        <div class="drawer-all js-output">
+          <p class="info-text">Histogram single symbols max</p>
+          <div class="chart-box"></div>
+        </div>
+        <!-- outputs -->
     </div>
 
 

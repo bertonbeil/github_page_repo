@@ -39,7 +39,6 @@ body {
 .large { font-size: 50px; }
 
 
-
 header.header {
   position: fixed;
   top: 0;
@@ -56,13 +55,15 @@ h1.h-title {
   font-weight: 100;
 }
 
-form.js-main-form {
+.drawer-all
+{ margin-bottom: 20px;
   padding: 20px;
   background: #2F2F2F;
   border-radius: 3px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
 }
-p.form-info-text {
+
+p.info-text {
   margin-top: 0;
   color: #707070;
   font-weight: 300;
@@ -93,27 +94,30 @@ button.js-btn-count {
 div.js-output{
     position: relative;
     width: 100%;
-    height: 100px;
-    padding-left: 20px;
-    margin-top: 150px;
+    padding: 20px;
 }
-div.js-output::before {
+div.chart-box {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+div.chart-box::before {
     content: '';
     position: absolute;
     width: 100%;
-    top: 0;
+    bottom: 0;
     left: 0;
     height: 1px;
-    background: #000;
+    background: rgb(169, 170, 169);
 }
-div.js-output::after {
+div.chart-box::after {
     content: '';
     position: absolute;
     width: 1px;
-    top: -90px;
-    left: 10px;
+    bottom: 0;
+    left: 0;
     height: 100%;
-    background: #000;
+    background: rgb(169, 170, 169);
 }
 
 div.js-letter {
@@ -126,6 +130,8 @@ div.js-letter {
     text-align: center;
 }
 div.js-letter > span {
+    position: inherit;
+    z-index: 9;
     display: block;
     font-size: 18px;
     line-height: 20px;
@@ -138,6 +144,5 @@ div.js-histogram-level {
     height: 0px;
     background: #880E4F;
     opacity: .5;
-    z-index: -1;
     transition: all .5s;
 }

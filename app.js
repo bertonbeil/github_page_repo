@@ -8,7 +8,7 @@ function updateCounts() {
     this.mainForm =  $('form.js-main-form');
     this.textInput = $('textarea.js-text-input');
     this.btnUpdate = $('button.js-btn-count');
-    this.outputValue = $('div.js-output');
+    this.outputValue = $('div.det-info-box');
 
     var cipher = textInput.val();
     var arrChars = [];

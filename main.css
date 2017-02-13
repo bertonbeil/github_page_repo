@@ -135,14 +135,14 @@ button.js-btn-count {
     width: 100%;
     text-align: center;
     padding: 15px 0;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 100;
     background: rgba(0,0,0, .1);
     border: 1px solid #616161;
     border-radius: 50px;
     outline: 0;
     cursor: pointer;
-    margin-top: 6px;
+    margin-top: 8px;
     transition: all .2s ease-in-out;
 }
 button.js-btn-count:hover,
@@ -159,13 +159,14 @@ div.js-output{
 div.chart-box {
   position: relative;
   width: 100%;
-  height: 100px;
+  height: 150px;
+  margin-bottom: 20px;
 }
 div.chart-box::before {
     content: '';
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     height: 1px;
     background: rgb(169, 170, 169);
@@ -183,17 +184,19 @@ div.chart-box::after {
 div.js-letter {
     position: relative;
     float: left;
-    width: 40px;
+    width: 26px;
     color: #FFF;
     margin-right: 3px;
     margin-top: -25px;
     text-align: center;
+    bottom: -150px;
 }
 div.js-letter > span {
     position: inherit;
     z-index: 9;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 300;
     line-height: 20px;
     margin-bottom: 10px;
 }
@@ -202,7 +205,8 @@ div.js-histogram-level {
     bottom: 35px;
     width: 100%;
     height: 0px;
-    background: #880E4F;
+    background: #8BCBB1;
+    background: linear-gradient(to top, #8BCBB1 , #00B0BD);
     opacity: .5;
     transition: all .5s;
 }

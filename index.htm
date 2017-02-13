@@ -32,8 +32,23 @@
           <form class="js-main-form">
             <p class="box-title">Insert or type your cipher below</p>
               <textarea name="textInput" class="js-text-input"></textarea>
-              <button type="button" class="js-btn-count" onclick="updateCounts()">Show</button>
           </form>
+          <div class="js-main-controls">
+            <p class="box-title">Options</p>
+            <label class="js-options-lable" for="monogram-show">
+              Show monogram
+              <input type="checkbox" id="monogram-show" value="" checked>
+            </label>
+            <label class="js-options-lable" for="bigram-show">
+              Show bigram
+              <input type="checkbox" id="bigram-show" value="">
+            </label>
+            <label class="js-options-lable" for="trigram-show">
+              Show trigram
+              <input type="checkbox" id="trigram-show" value="">
+            </label>
+            <button type="button" class="js-btn-count" onclick="updateCounts()">Show</button>
+          </div>
         </div><!--/ form block -->
 
 

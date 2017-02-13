@@ -24,7 +24,8 @@ function updateCounts() {
             arrChars[cipher[i]] += 1;
         }
     }
-    countChars = arrChars.count;
+
+    // countChars = arrChars.count;
 
     console.debug(arrChars);
 
@@ -39,18 +40,21 @@ function updateCounts() {
     var len = sortedChars.length;
     for (i = 0; i < sortedChars.length; i++) {
         character = String.fromCharCode(sortedChars[i]);
-        if (sortedChars[i] == 11) {
-            character = '↵'
+        if (sortedChars[i] == 13) {
+            character = "<<"
         }
         if (sortedChars[i] == 9) {
             character = 'TAB'
+        }
+        if (sortedChars[i] == 32) {
+            character = "_"
         }
 
         letter = '';
         letterHeight = '';
         letterAmount = '';
 
-        letter +=  "   " + character + "  ";
+        letter +=  " " + character + " ";
 
         letterHeight += ' ' + arrChars[String.fromCharCode(sortedChars[i])] + "0px";
 

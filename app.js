@@ -1,62 +1,15 @@
 window.histogramer = {};
 
 this.version = '0.0.1'
-var ver = $('<p/>', {
-  class: 'app-version',
-  text: this.version
- }).appendTo('body');
-
 this.display = $('body');
 
-histogramer.oop = function () {
 
-  this.init = function () {
-
-  }
-
-  this.create = function(tag = 'div', className = 'test-class', appendTo) {
-
-      var appendTo = appendTo;
-      var el = {
-              tag: '<' + tag + '/>',
-              className: className
-          };
-
-      var display = $(el.tag, {
-              class: el.className
-          });
-
-     //  display.append(body);
-  }
-
-}
-
-
-
-var container = create('div', 'container', body);
-
-var mainForm = create('form', 'js-main-form', container);
-
-
- this.mainForm =  $('<form/>', {
-   class: 'js-main-form'
- });
- this.textInput = $('<textarea/>', {
-   class: 'js-text-input'
- });
- this.btnUpdate = $('<button/>', {
-   class: 'js-btn-count'
- });
- this.outputValue = $('div', {
-   class: 'js-output'
- });
- this.detInfo = $('div', {
-   class: 'det-info-box'
- });
-
-// body.append(this.mainForm);
 
 function updateCounts() {
+
+    var textInput = $('textarea.js-text-input');
+    var detInfo = $('.js-total-count');
+    var outputValue = $('.chart-box');
 
     var cipher = textInput.val();
     var arrChars = [];
@@ -115,7 +68,7 @@ function updateCounts() {
     }
 
     // Print total character count
-    detInfo.find('span').append(document.createTextNode(cipher.length + "\n"));
+    detInfo.append(document.createTextNode(cipher.length + "\n"));
 
 }
 

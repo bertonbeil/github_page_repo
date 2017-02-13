@@ -45,16 +45,35 @@ header.header {
   left: 0;
   width: 100%;
   height: 80px;
+  padding: 20px 0;
   background: #2F2F2F;
   box-shadow: 0 3px 6px rgba(0,0,0, .28)
 }
 
+div.h-br {
+  width: 50%;
+  float: left;
+}
 h1.h-title {
-  line-height: 80px;
+  line-height: 40px;
   margin: 0;
   color: #FFF;
   font-weight: 100;
 }
+div.h-info {
+  width: 50%;
+  float: right;
+}
+a.github {
+  float: right;
+  height: 40px;
+}
+i.fa-github {
+  float: right;
+  color: #fff;
+  font-size: 40px;
+}
+
 
 .drawer-all
 { margin-bottom: 20px;

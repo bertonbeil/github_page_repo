@@ -48,6 +48,7 @@ header.header {
   background: #2F2F2F;
   box-shadow: 0 3px 6px rgba(0,0,0, .28)
 }
+
 h1.h-title {
   line-height: 80px;
   margin: 0;
@@ -63,9 +64,12 @@ h1.h-title {
   box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
 }
 
-p.info-text {
+p.box-title {
   margin-top: 0;
   color: #707070;
+  font-weight: 300;
+}
+p.info-text {
   font-weight: 300;
 }
 textarea.js-text-input {

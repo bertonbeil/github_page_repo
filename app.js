@@ -1,15 +1,62 @@
+window.histogramer = {};
+
 this.version = '0.0.1'
 var ver = $('<p/>', {
   class: 'app-version',
   text: this.version
  }).appendTo('body');
-function updateCounts() {
 
-    this.mainForm =  $('form.js-main-form');
-    this.textInput = $('textarea.js-text-input');
-    this.btnUpdate = $('button.js-btn-count');
-    this.outputValue = $('div.js-output');
-    this.detInfo = $('div.det-info-box');
+this.display = $('body');
+
+histogramer.oop = function () {
+
+  this.init = function () {
+
+  }
+
+  this.create = function(tag = 'div', className = 'test-class', appendTo) {
+
+      var appendTo = appendTo;
+      var el = {
+              tag: '<' + tag + '/>',
+              className: className
+          };
+
+      var display = $(el.tag, {
+              class: el.className
+          });
+
+     //  display.append(body);
+  }
+
+}
+
+
+
+var container = create('div', 'container', body);
+
+var mainForm = create('form', 'js-main-form', container);
+
+
+ this.mainForm =  $('<form/>', {
+   class: 'js-main-form'
+ });
+ this.textInput = $('<textarea/>', {
+   class: 'js-text-input'
+ });
+ this.btnUpdate = $('<button/>', {
+   class: 'js-btn-count'
+ });
+ this.outputValue = $('div', {
+   class: 'js-output'
+ });
+ this.detInfo = $('div', {
+   class: 'det-info-box'
+ });
+
+// body.append(this.mainForm);
+
+function updateCounts() {
 
     var cipher = textInput.val();
     var arrChars = [];
@@ -18,6 +65,7 @@ function updateCounts() {
     var len = cipher.length;
     for (var i = 0; i < len; i++) {
         if (!arrChars[cipher[i]]) {
+          console.log(i);
             arrChars[cipher[i]] = 1;
         } else {
             arrChars[cipher[i]] += 1;
@@ -25,6 +73,7 @@ function updateCounts() {
     }
     countChars = arrChars.count;
 
+    console.debug(arrChars);
 
     // Sort the characters by code
     sortedChars = [];
@@ -37,8 +86,8 @@ function updateCounts() {
     var len = sortedChars.length;
     for (i = 0; i < sortedChars.length; i++) {
         character = String.fromCharCode(sortedChars[i]);
-        if (sortedChars[i] == 10) {
-            character = 'LF'
+        if (sortedChars[i] == 11) {
+            character = '↵'
         }
         if (sortedChars[i] == 9) {
             character = 'TAB'
@@ -66,14 +115,17 @@ function updateCounts() {
     }
 
     // Print total character count
-    detInfo.append(document.createTextNode('-----TOTAL CHARACTERS: ' + cipher.length + "\n"));
+    detInfo.find('span').append(document.createTextNode(cipher.length + "\n"));
 
 }
 
 function zeroPad(n, digits, padChar) {
 	n = n.toString();
+
 	while (n.length < digits) {
 		n = padChar + n;
+
 	}
+
 	return n;
 }

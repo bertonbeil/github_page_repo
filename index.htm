@@ -17,21 +17,25 @@
     <div class="container">
 
         <!-- form block -->
-        <form class="drawer-all js-main-form">
-          <p class="info-text">Insert or type your cipher below</p>
-            <textarea name="textInput" class="js-text-input"></textarea>
-            <button type="button" class="js-btn-count" onclick="updateCounts()">Show</button>
-        </form><!--/ form block -->
+        <div class="drawer-all">
+          <form class="js-main-form">
+            <p class="box-title">Insert or type your cipher below</p>
+              <textarea name="textInput" class="js-text-input"></textarea>
+              <button type="button" class="js-btn-count" onclick="updateCounts()">Show</button>
+          </form>
+        </div><!--/ form block -->
+
 
         <!-- detailed information box -->
         <div class="drawer-all det-info-box">
-          <p class="info-text">Detailed information</p>
+          <p class="box-title">Detailed information</p>
+          <p class="info-text">Totat characters: <span class="js-total-count"></span></p>
         </div>
         <!--/ detailed information box -->
 
         <!-- outputs -->
         <div class="drawer-all js-output">
-          <p class="info-text">Histogram single symbols max</p>
+          <p class="box-title">Histogram single symbols max</p>
           <div class="chart-box"></div>
         </div>
         <!-- outputs -->
